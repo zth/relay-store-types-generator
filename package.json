@@ -1,0 +1,76 @@
+{
+  "name": "relay-store-types-generator",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "bin": {
+    "relay-store-types-generator": "dist/index.js"
+  },
+  "author": "Gabriel Nordeborn",
+  "license": "MIT",
+  "sideEffects": false,
+  "repository": "https://github.com/zth/relay-store-types-generator",
+  "description": "Generate types for the Relay store from your GraphQL schema.",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist",
+    "yarn.lock"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -m commonjs --outDir dist",
+    "test:build-assets": "yarn build && node dist/index.js --flow --schema ./test/testSchema.graphql --out-dir ./test --custom-scalars-path ./test/testCustomScalars.js",
+    "prepublish": "yarn build"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "graphql",
+    "relay",
+    "relaymodern",
+    "react"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 80
+  },
+  "dependencies": {
+    "@babel/generator": "^7.4.4",
+    "@babel/types": "^7.4.4",
+    "array-flat-polyfill": "^1.0.1",
+    "graphql": "^14.3.0",
+    "invariant": "^2.2.4",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.2.0",
+    "@types/graphql": "^14.2.0",
+    "@types/invariant": "^2.2.29",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.0",
+    "@types/prettier": "^1.16.3",
+    "commander": "^2.20.0",
+    "flow-bin": "^0.98.1",
+    "husky": "^2.3.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "1.17.0",
+    "ts-jest": "^24.0.2"
+  }
+}

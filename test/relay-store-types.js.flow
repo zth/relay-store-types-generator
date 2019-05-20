@@ -1,0 +1,448 @@
+/* @flow strict-local
+ THIS FILE IS AUTO-GENERATED, PLEASE DO NOT EDIT */
+export type Union$Population = RecordProxy$User | RecordProxy$Pet;
+export type Interface$Node = RecordProxy$User | RecordProxy$Pet;
+export type Enum$PetType = 'CAT' | 'DOG';
+export type Enum$Grade = 'A' | 'B' | 'C';
+type RecordProxy$RootQuery$getValue$simpleScalar = (
+  key: 'simpleScalar',
+  args?: ?any
+) => ?number;
+type RecordProxy$RootQuery$setValue$simpleScalar = (
+  value: ?number,
+  name: 'simpleScalar',
+  args?: ?any
+) => RecordProxy$RootQuery;
+type RecordProxy$RootQuery$getOrCreateLinkedRecord$viewer = (
+  name: 'viewer',
+  typeName: 'User',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$RootQuery$getLinkedRecord$viewer = (
+  key: 'viewer',
+  args?: ?any
+) => ?RecordProxy$User;
+type RecordProxy$RootQuery$setLinkedRecord$viewer = (
+  record: RecordProxy$User,
+  name: 'viewer',
+  args?: ?any
+) => RecordProxy$RootQuery;
+type RecordProxy$RootQuery$getOrCreateLinkedRecord$User = (
+  name: 'User',
+  typeName: 'User',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$RootQuery$getLinkedRecord$User = (
+  key: 'User',
+  args?: ?any
+) => ?RecordProxy$User;
+type RecordProxy$RootQuery$setLinkedRecord$User = (
+  record: RecordProxy$User,
+  name: 'User',
+  args?: ?any
+) => RecordProxy$RootQuery;
+type RecordProxy$RootQuery$getOrCreateLinkedRecord$Pet = (
+  name: 'Pet',
+  typeName: 'Pet',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$RootQuery$getLinkedRecord$Pet = (
+  key: 'Pet',
+  args?: ?any
+) => ?RecordProxy$Pet;
+type RecordProxy$RootQuery$setLinkedRecord$Pet = (
+  record: RecordProxy$Pet,
+  name: 'Pet',
+  args?: ?any
+) => RecordProxy$RootQuery;
+type RecordProxy$RootQuery$getOrCreateLinkedRecord$findPop = (
+  name: 'findPop',
+  typeName: 'Population',
+  args?: ?any
+) => Union$Population;
+type RecordProxy$RootQuery$getLinkedRecord$findPop = (
+  key: 'findPop',
+  args?: ?any
+) => ?Union$Population;
+type RecordProxy$RootQuery$setLinkedRecord$findPop = (
+  record: Union$Population,
+  name: 'findPop',
+  args?: ?any
+) => RecordProxy$RootQuery;
+export type RecordProxy$RootQuery = {|
+  copyFieldsFrom: (source: RecordProxy$RootQuery) => void,
+  getDataID: () => string,
+  getType: () => 'RootQuery',
+  getValue: RecordProxy$RootQuery$getValue$simpleScalar,
+  setValue: RecordProxy$RootQuery$setValue$simpleScalar
+|};
+type RecordProxy$User$getValue$id = (key: 'id', args?: ?any) => ?string;
+type RecordProxy$User$setValue$id = (
+  value: ?string,
+  name: 'id',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$User$getValue$_id = (key: '_id', args?: ?any) => ?string;
+type RecordProxy$User$setValue$_id = (
+  value: ?string,
+  name: '_id',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$User$getValue$name = (key: 'name', args?: ?any) => ?string;
+type RecordProxy$User$setValue$name = (
+  value: ?string,
+  name: 'name',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$User$getValue$age = (key: 'age', args?: ?any) => ?number;
+type RecordProxy$User$setValue$age = (
+  value: ?number,
+  name: 'age',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$User$getValue$grades = (
+  key: 'grades',
+  args?: ?any
+) => ?Enum$Grade;
+type RecordProxy$User$setValue$grades = (
+  value: ?Enum$Grade,
+  name: 'grades',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$User$getOrCreateLinkedRecord$pets = (
+  name: 'pets',
+  typeName: 'PetConnection',
+  args?: ?any
+) => RecordProxy$PetConnection;
+type RecordProxy$User$getLinkedRecord$pets = (
+  key: 'pets',
+  args?: ?any
+) => ?RecordProxy$PetConnection;
+type RecordProxy$User$setLinkedRecord$pets = (
+  record: RecordProxy$PetConnection,
+  name: 'pets',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$User$getOrCreateLinkedRecord$favoritePet = (
+  name: 'favoritePet',
+  typeName: 'Pet',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$User$getLinkedRecord$favoritePet = (
+  key: 'favoritePet',
+  args?: ?any
+) => ?RecordProxy$Pet;
+type RecordProxy$User$setLinkedRecord$favoritePet = (
+  record: RecordProxy$Pet,
+  name: 'favoritePet',
+  args?: ?any
+) => RecordProxy$User;
+export type RecordProxy$User = {|
+  copyFieldsFrom: (source: RecordProxy$User) => void,
+  getDataID: () => string,
+  getType: () => 'User',
+  getValue: RecordProxy$User$getValue$id &
+    RecordProxy$User$getValue$_id &
+    RecordProxy$User$getValue$name &
+    RecordProxy$User$getValue$age &
+    RecordProxy$User$getValue$grades,
+  setValue: RecordProxy$User$setValue$id &
+    RecordProxy$User$setValue$_id &
+    RecordProxy$User$setValue$name &
+    RecordProxy$User$setValue$age &
+    RecordProxy$User$setValue$grades
+|};
+type RecordProxy$Pet$getValue$id = (key: 'id', args?: ?any) => ?string;
+type RecordProxy$Pet$setValue$id = (
+  value: ?string,
+  name: 'id',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$Pet$getValue$_id = (key: '_id', args?: ?any) => ?string;
+type RecordProxy$Pet$setValue$_id = (
+  value: ?string,
+  name: '_id',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$Pet$getValue$name = (key: 'name', args?: ?any) => ?string;
+type RecordProxy$Pet$setValue$name = (
+  value: ?string,
+  name: 'name',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$Pet$getValue$type = (
+  key: 'type',
+  args?: ?any
+) => ?Enum$PetType;
+type RecordProxy$Pet$setValue$type = (
+  value: ?Enum$PetType,
+  name: 'type',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$Pet$getValue$grade = (
+  key: 'grade',
+  args?: ?any
+) => ?Enum$Grade;
+type RecordProxy$Pet$setValue$grade = (
+  value: ?Enum$Grade,
+  name: 'grade',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$Pet$getOrCreateLinkedRecord$owner = (
+  name: 'owner',
+  typeName: 'User',
+  args?: ?any
+) => RecordProxy$User;
+type RecordProxy$Pet$getLinkedRecord$owner = (
+  key: 'owner',
+  args?: ?any
+) => ?RecordProxy$User;
+type RecordProxy$Pet$setLinkedRecord$owner = (
+  record: RecordProxy$User,
+  name: 'owner',
+  args?: ?any
+) => RecordProxy$Pet;
+export type RecordProxy$Pet = {|
+  copyFieldsFrom: (source: RecordProxy$Pet) => void,
+  getDataID: () => string,
+  getType: () => 'Pet',
+  getValue: RecordProxy$Pet$getValue$id &
+    RecordProxy$Pet$getValue$_id &
+    RecordProxy$Pet$getValue$name &
+    RecordProxy$Pet$getValue$type &
+    RecordProxy$Pet$getValue$grade,
+  setValue: RecordProxy$Pet$setValue$id &
+    RecordProxy$Pet$setValue$_id &
+    RecordProxy$Pet$setValue$name &
+    RecordProxy$Pet$setValue$type &
+    RecordProxy$Pet$setValue$grade
+|};
+type RecordProxy$PetConnection$getOrCreateLinkedRecord$pageInfo = (
+  name: 'pageInfo',
+  typeName: 'PageInfo',
+  args?: ?any
+) => RecordProxy$PageInfo;
+type RecordProxy$PetConnection$getLinkedRecord$pageInfo = (
+  key: 'pageInfo',
+  args?: ?any
+) => ?RecordProxy$PageInfo;
+type RecordProxy$PetConnection$setLinkedRecord$pageInfo = (
+  record: RecordProxy$PageInfo,
+  name: 'pageInfo',
+  args?: ?any
+) => RecordProxy$PetConnection;
+export type RecordProxy$PetConnection = {|
+  copyFieldsFrom: (source: RecordProxy$PetConnection) => void,
+  getDataID: () => string,
+  getType: () => 'PetConnection'
+|};
+type RecordProxy$PetEdge$getValue$cursor = (
+  key: 'cursor',
+  args?: ?any
+) => ?string;
+type RecordProxy$PetEdge$setValue$cursor = (
+  value: ?string,
+  name: 'cursor',
+  args?: ?any
+) => RecordProxy$PetEdge;
+type RecordProxy$PetEdge$getOrCreateLinkedRecord$node = (
+  name: 'node',
+  typeName: 'Pet',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$PetEdge$getLinkedRecord$node = (
+  key: 'node',
+  args?: ?any
+) => ?RecordProxy$Pet;
+type RecordProxy$PetEdge$setLinkedRecord$node = (
+  record: RecordProxy$Pet,
+  name: 'node',
+  args?: ?any
+) => RecordProxy$PetEdge;
+export type RecordProxy$PetEdge = {|
+  copyFieldsFrom: (source: RecordProxy$PetEdge) => void,
+  getDataID: () => string,
+  getType: () => 'PetEdge',
+  getValue: RecordProxy$PetEdge$getValue$cursor,
+  setValue: RecordProxy$PetEdge$setValue$cursor
+|};
+type RecordProxy$PageInfo$getValue$hasNextPage = (
+  key: 'hasNextPage',
+  args?: ?any
+) => ?boolean;
+type RecordProxy$PageInfo$setValue$hasNextPage = (
+  value: ?boolean,
+  name: 'hasNextPage',
+  args?: ?any
+) => RecordProxy$PageInfo;
+type RecordProxy$PageInfo$getValue$hasPreviousPage = (
+  key: 'hasPreviousPage',
+  args?: ?any
+) => ?boolean;
+type RecordProxy$PageInfo$setValue$hasPreviousPage = (
+  value: ?boolean,
+  name: 'hasPreviousPage',
+  args?: ?any
+) => RecordProxy$PageInfo;
+type RecordProxy$PageInfo$getValue$endCursor = (
+  key: 'endCursor',
+  args?: ?any
+) => ?string;
+type RecordProxy$PageInfo$setValue$endCursor = (
+  value: ?string,
+  name: 'endCursor',
+  args?: ?any
+) => RecordProxy$PageInfo;
+type RecordProxy$PageInfo$getValue$startCursor = (
+  key: 'startCursor',
+  args?: ?any
+) => ?string;
+type RecordProxy$PageInfo$setValue$startCursor = (
+  value: ?string,
+  name: 'startCursor',
+  args?: ?any
+) => RecordProxy$PageInfo;
+export type RecordProxy$PageInfo = {|
+  copyFieldsFrom: (source: RecordProxy$PageInfo) => void,
+  getDataID: () => string,
+  getType: () => 'PageInfo',
+  getValue: RecordProxy$PageInfo$getValue$hasNextPage &
+    RecordProxy$PageInfo$getValue$hasPreviousPage &
+    RecordProxy$PageInfo$getValue$endCursor &
+    RecordProxy$PageInfo$getValue$startCursor,
+  setValue: RecordProxy$PageInfo$setValue$hasNextPage &
+    RecordProxy$PageInfo$setValue$hasPreviousPage &
+    RecordProxy$PageInfo$setValue$endCursor &
+    RecordProxy$PageInfo$setValue$startCursor
+|};
+type RecordProxy$SetPetGradePayload$getOrCreateLinkedRecord$pet = (
+  name: 'pet',
+  typeName: 'Pet',
+  args?: ?any
+) => RecordProxy$Pet;
+type RecordProxy$SetPetGradePayload$getLinkedRecord$pet = (
+  key: 'pet',
+  args?: ?any
+) => ?RecordProxy$Pet;
+type RecordProxy$SetPetGradePayload$setLinkedRecord$pet = (
+  record: RecordProxy$Pet,
+  name: 'pet',
+  args?: ?any
+) => RecordProxy$SetPetGradePayload;
+export type RecordProxy$SetPetGradePayload = {|
+  copyFieldsFrom: (source: RecordProxy$SetPetGradePayload) => void,
+  getDataID: () => string,
+  getType: () => 'SetPetGradePayload'
+|};
+export type Enum$Store$AllRecordProxyTypes =
+  | RecordProxy$RootQuery
+  | RecordProxy$User
+  | RecordProxy$Pet
+  | RecordProxy$PetConnection
+  | RecordProxy$PetEdge
+  | RecordProxy$PageInfo
+  | RecordProxy$SetPetGradePayload;
+type Store$RecordProxy$RootQuery$create = (
+  dataID: string,
+  typeName: 'RootQuery'
+) => RecordProxy$RootQuery;
+type Store$RecordProxy$User$create = (
+  dataID: string,
+  typeName: 'User'
+) => RecordProxy$User;
+type Store$RecordProxy$Pet$create = (
+  dataID: string,
+  typeName: 'Pet'
+) => RecordProxy$Pet;
+type Store$RecordProxy$PetConnection$create = (
+  dataID: string,
+  typeName: 'PetConnection'
+) => RecordProxy$PetConnection;
+type Store$RecordProxy$PetEdge$create = (
+  dataID: string,
+  typeName: 'PetEdge'
+) => RecordProxy$PetEdge;
+type Store$RecordProxy$PageInfo$create = (
+  dataID: string,
+  typeName: 'PageInfo'
+) => RecordProxy$PageInfo;
+type Store$RecordProxy$SetPetGradePayload$create = (
+  dataID: string,
+  typeName: 'SetPetGradePayload'
+) => RecordProxy$SetPetGradePayload;
+type Store$getRootField$viewer = (
+  fieldName: 'viewer',
+  args?: ?any
+) => ?RecordProxy$User;
+type Store$getRootField$User = (
+  fieldName: 'User',
+  args?: ?any
+) => ?RecordProxy$User;
+type Store$getRootField$Pet = (
+  fieldName: 'Pet',
+  args?: ?any
+) => ?RecordProxy$Pet;
+type Store$getRootField$simpleScalar = (
+  fieldName: 'simpleScalar',
+  args?: ?any
+) => ?number;
+type Store$getRootField$node = (
+  fieldName: 'node',
+  args?: ?any
+) => ?Interface$Node;
+type Store$getRootField$findPop = (
+  fieldName: 'findPop',
+  args?: ?any
+) => ?Union$Population;
+type Store$getRootField$setPetGrade = (
+  fieldName: 'setPetGrade',
+  args?: ?any
+) => ?RecordProxy$SetPetGradePayload;
+type Store$getPluralRootField$listUsers = (
+  fieldName: 'listUsers',
+  args?: ?any
+) => ?Array<?RecordProxy$User>;
+export type Store$RecordSourceSelectorProxy = {|
+  create: Store$RecordProxy$RootQuery$create &
+    Store$RecordProxy$User$create &
+    Store$RecordProxy$Pet$create &
+    Store$RecordProxy$PetConnection$create &
+    Store$RecordProxy$PetEdge$create &
+    Store$RecordProxy$PageInfo$create &
+    Store$RecordProxy$SetPetGradePayload$create,
+  delete: (dataID: string) => void,
+  get: (dataID: string) => ?Enum$Store$AllRecordProxyTypes,
+  getRoot: () => RecordProxy$RootQuery,
+  getRootField: Store$getRootField$viewer &
+    Store$getRootField$User &
+    Store$getRootField$Pet &
+    Store$getRootField$simpleScalar &
+    Store$getRootField$node &
+    Store$getRootField$findPop &
+    Store$getRootField$setPetGrade,
+  getPluralRootField: Store$getPluralRootField$listUsers
+|};
+type ConnectionHandler$getConnection$RecordProxy$User$RecordProxy$PetConnection = (
+  record: RecordProxy$User,
+  key: string
+) => ?RecordProxy$PetConnection;
+type ConnectionHandler$createEdge$User$PetEdge = (
+  store: Store$RecordSourceSelectorProxy,
+  connection: RecordProxy$PetConnection,
+  node: RecordProxy$User,
+  edgeType: 'PetEdge'
+) => RecordProxy$PetEdge;
+type ConnectionHandler$insertEdge$PetConnection = (
+  connection: RecordProxy$PetConnection,
+  newEdge: RecordProxy$PetEdge,
+  cursor?: ?string
+) => void;
+type ConnectionHandler$insertEdgeUnion = ConnectionHandler$insertEdge$PetConnection;
+type Store$allConnections = RecordProxy$PetConnection;
+export type Store$ConnectionHandler = {|
+  getConnection: ConnectionHandler$getConnection$RecordProxy$User$RecordProxy$PetConnection,
+  createEdge: ConnectionHandler$createEdge$User$PetEdge,
+  insertEdgeBefore: ConnectionHandler$insertEdgeUnion,
+  insertEdgeAfter: ConnectionHandler$insertEdgeUnion,
+  deleteNode: (connection: Store$allConnections, nodeID: string) => void
+|};
