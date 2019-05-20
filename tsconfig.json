@@ -8,7 +8,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "outDir": "./dist/",
     "noImplicitAny": false,

@@ -1,15 +1,14 @@
 # relay-store-types-generator
 
-_EXPERIMENTAL, USE AT OWN RISK_
+_THIS IS EXPERIMENTAL_
 
-Generate types for the Relay store from your GraphQL schema. More type safety for your Relay store with zero runtime cost and almost zero code cost.
+Generate types for the Relay store from your GraphQL schema. More type safety for your Relay store with zero runtime cost and a very small set of changes needed for your code.
 
 _Currently only generates Flow types, TypeScript mode coming soon_.
 
 ## The idea
 
-When you write queries, mutations and fragments, Relay generates types for you that you can use to use the data Relay gives
-you in a type-safe way. Relay also lets you manually interact with its store through `updaters` after mutations, `commitLocalUpdate` and so on. But, when interacting with the store you're left with a generalized API with general types.
+When you write queries, mutations and fragments, Relay generates types for you that you can use for type-safety. Relay also lets you manually interact with its store through `updaters` after mutations, `commitLocalUpdate` and so on. But, when interacting with the store you're left with a generalized API with general types.
 
 This package generates types for Relay's store tailored to your specific GraphQL schema, so that your interaction with the store can be
 fully type safe, just like interacting with the data Relay gives you.
