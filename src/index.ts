@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import 'array-flat-polyfill';
 import * as program from 'commander';
 import * as path from 'path';
@@ -24,12 +25,14 @@ const customScalars = program.customScalarsPath
   ? require(path.resolve(program.customScalarsPath))
   : null;
 
-invariant(
-  customScalars &&
-    typeof customScalars === 'object' &&
-    !Object.values(customScalars).find(val => typeof val !== 'string'),
-  'customScalars file must export your custom scalars using module.export, and adhere to the shape { [customScalarName: string]: string }.'
-);
+if (customScalars) {
+  invariant(
+    customScalars &&
+      typeof customScalars === 'object' &&
+      !Object.values(customScalars).find(val => typeof val !== 'string'),
+    'customScalars file must export your custom scalars using module.export, and adhere to the shape { [customScalarName: string]: string }.'
+  );
+}
 
 const config: Config = {
   schemaPath: path.resolve(program.schema),
