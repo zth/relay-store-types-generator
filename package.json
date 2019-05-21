@@ -52,25 +52,21 @@
     "@babel/generator": "^7.4.4",
     "@babel/types": "^7.4.4",
     "array-flat-polyfill": "^1.0.1",
+    "commander": "^2.20.0",
     "graphql": "^14.3.0",
     "invariant": "^2.2.4",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
-    "@types/chalk": "^2.2.0",
+    "@types/babel__generator": "^7.0.2",
     "@types/commander": "^2.12.2",
-    "@types/figlet": "^1.2.0",
     "@types/graphql": "^14.2.0",
     "@types/invariant": "^2.2.29",
-    "@types/jest": "^24.0.13",
     "@types/node": "^12.0.0",
     "@types/prettier": "^1.16.3",
-    "commander": "^2.20.0",
     "flow-bin": "^0.98.1",
     "husky": "^2.3.0",
-    "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
-    "prettier": "1.17.0",
-    "ts-jest": "^24.0.2"
+    "prettier": "1.17.0"
   }
 }
