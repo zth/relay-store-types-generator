@@ -1,6 +1,6 @@
 # relay-store-types-generator
 
-_THIS IS EXPERIMENTAL_
+_THIS IS HIGHLY EXPERIMENTAL AND PROBABLY NOT READY FOR ACTUAL USE YET_
 
 Generate types for the Relay store from your GraphQL schema. More type safety for your Relay store with zero runtime cost and a very small set of changes needed for your code.
 
