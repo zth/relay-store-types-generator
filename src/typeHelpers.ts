@@ -25,11 +25,6 @@ import {
   getUnionName
 } from './nameGenerators';
 
-const customScalars: ScalarObj = {
-  Datetime: 'string',
-  Cursor: 'string'
-};
-
 export function makeArray(type: FlowType) {
   return t.genericTypeAnnotation(
     t.identifier('Array'),
@@ -175,11 +170,11 @@ export function getTypeFromName(
   name: string,
   parsedSchema: ParsedSchema
 ): TTypes | null {
-  if (isScalar(name, customScalars)) {
+  if (isScalar(name, parsedSchema.customScalars)) {
     return {
       kind: 'SCALAR',
       name,
-      type: getScalarName(name, customScalars)
+      type: getScalarName(name, parsedSchema.customScalars)
     };
   }
 

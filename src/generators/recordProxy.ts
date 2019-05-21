@@ -65,6 +65,16 @@ export function generateRecordProxy(
 
       const type = getTypeFromName(targetType.typeName, parsedSchema);
 
+      if (!type) {
+        console.warn(
+          `Warning: Could not find type for type with name "${
+            targetType.typeName
+          }".`
+        );
+
+        return acc;
+      }
+
       switch (type.kind) {
         case 'SCALAR':
         case 'ENUM': {

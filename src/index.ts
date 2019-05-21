@@ -34,6 +34,13 @@ if (customScalars) {
   );
 }
 
+invariant(program.schema, 'You must include the path to your schema.graphql.');
+
+invariant(
+  program.outDir,
+  'You must include a directory path to output the type file in.'
+);
+
 const config: Config = {
   schemaPath: path.resolve(program.schema),
   outDir: path.resolve(program.outDir),
@@ -42,22 +49,13 @@ const config: Config = {
 };
 
 invariant(
-  config.schemaPath,
-  'You must include the path to your schema.graphql.'
-);
-
-invariant(
-  config.outDir,
-  'You must include a directory path to output the type file in.'
-);
-
-invariant(
   config.mode === 'FLOW',
   'Currently Flow-only, TypeScript coming soon!'
 );
 
 const parsedSchema = parseSchema(
-  fs.readFileSync(path.resolve(config.schemaPath), 'utf8')
+  fs.readFileSync(path.resolve(config.schemaPath), 'utf8'),
+  config
 );
 
 console.log(

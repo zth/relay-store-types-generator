@@ -1,8 +1,10 @@
 import {
   Argument,
+  Config,
   FieldValue,
   ObjectFieldsType,
   ParsedSchema,
+  ScalarObj,
   TEnum,
   TInterface,
   TObject,
@@ -17,15 +19,16 @@ import {
   TypeNode
 } from 'graphql';
 
-export function parseSchema(rawSchema: string): ParsedSchema {
+export function parseSchema(rawSchema: string, config: Config): ParsedSchema {
   const parsedSchema = parse(rawSchema);
 
   const enumTypes: Array<TEnum> = [];
   const objectTypes: Array<TObject> = [];
-  const customScalars: Array<string> = [];
+  const customScalars: ScalarObj = { ...config.customScalars };
   const rootFields: Array<FieldValue> = [];
   const interfaceTypes: Array<TInterface> = [];
   const unionTypes: Array<TUnion> = [];
+  const foundScalars: Array<string> = [];
 
   let rootType: TObject;
 
@@ -55,7 +58,7 @@ export function parseSchema(rawSchema: string): ParsedSchema {
         break;
       }
       case 'ScalarTypeDefinition':
-        customScalars.push(definition.name.value);
+        foundScalars.push(definition.name.value);
         break;
       case 'EnumTypeDefinition': {
         enumTypes.push({
@@ -132,6 +135,18 @@ export function parseSchema(rawSchema: string): ParsedSchema {
           1
         );
       }
+    }
+  });
+
+  /**
+   * Check custom scalars and warn if no definition is supplied.
+   */
+
+  foundScalars.forEach(scalarName => {
+    if (!customScalars[scalarName]) {
+      console.warn(
+        `Warning: Missing definition for custom scalar "${scalarName}". Please add it to your file exporting your custom scalars, and make sure that file is pointed out using --custom-scalars-path.`
+      );
     }
   });
 

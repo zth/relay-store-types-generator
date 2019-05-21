@@ -69,7 +69,7 @@ export type ParsedSchema = {
   objectTypes: Array<TObject>;
   interfaceTypes: Array<TInterface>;
   unionTypes: Array<TUnion>;
-  customScalars: Array<string>;
+  customScalars: ScalarObj;
   enumTypes: Array<TEnum>;
   rootType: TObject;
 };
